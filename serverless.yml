@@ -1,0 +1,14 @@
+service: good-friend-cron
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+functions:
+  sendEventReminder:
+    name: senderEventReminder
+    description: Lambda function to send out event reminds to customers
+    handler: handler.sendEventReminder
+    events:
+      - schedule:
+          rate: cron(0 9 * * ? *)
