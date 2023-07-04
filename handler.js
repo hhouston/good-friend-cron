@@ -1,7 +1,7 @@
 'use strict';
 const os = require('os');
 
-module.exports.senderEventReminder = async (event) => {
+module.exports.sendEventReminder = async (event) => {
     console.log('send event reminder triggered: ', event)
   return {
     statusCode: 200,
